@@ -14,11 +14,11 @@
     <button id="btnListar">Listar Personas</button>
   </nav>
 
-  <!-- Sección Agregar Persona -->
+  <!-- Sección Agregar -->
   <section id="seccionAgregar">
     <h2>Agregar Persona</h2>
     <form id="formAgregar">
-      <input type="text" id="documento" placeholder="Número de Identificación" required>
+      <input type="text" id="id" placeholder="Número de Identificación" required>
       <input type="text" id="nombres" placeholder="Nombres" required>
       <input type="text" id="apellidos" placeholder="Apellidos" required>
       <input type="text" id="direccion" placeholder="Dirección" required>
@@ -27,26 +27,26 @@
     </form>
   </section>
 
-  <!-- Sección Buscar Persona -->
+  <!-- Sección Buscar -->
   <section id="seccionBuscar" class="hidden">
     <h2>Buscar Persona</h2>
     <form id="formBuscar">
       <select id="criterio">
-        <option value="documento">Documento</option>
-        <option value="nombres">Nombre</option>
-        <option value="apellidos">Apellido</option>
+        <option value="id">ID</option>
+        <option value="nombres">Nombres</option>
+        <option value="apellidos">Apellidos</option>
       </select>
-      <input type="text" id="valorBuscar" placeholder="Valor a buscar" required>
+      <input type="text" id="valorBuscar" placeholder="Buscar...">
       <button type="submit">Buscar</button>
     </form>
-    <div id="resultadoBusqueda"></div>
+    <div id="resultadoBuscar"></div>
   </section>
 
-  <!-- Sección Listar Personas -->
+  <!-- Sección Listar -->
   <section id="seccionListar" class="hidden">
-    <h2>Listado de Personas</h2>
+    <h2>Lista de Personas</h2>
     <button id="btnCargarLista">Cargar Lista</button>
-    <div id="listaPersonas"></div>
+    <div id="resultadoLista"></div>
   </section>
 
   <script src="script.js"></script>
