@@ -1,110 +1,122 @@
-/* Estilo general */
+/* styles.css - diseño más profesional */
+
+:root {
+  --color-principal: #2c3e50;
+  --color-secundario: #ecf0f1;
+  --color-acento: #3498db;
+  --color-texto: #2d3436;
+  --fuente-principal: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--fuente-principal);
   margin: 0;
-  padding: 0;
-  background: #f4f6f8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #f9fbfc;
+  color: var(--color-texto);
+  line-height: 1.6;
 }
 
-/* Título principal */
 h1 {
-  margin-top: 20px;
-  color: #333;
   text-align: center;
+  color: var(--color-principal);
+  padding: 20px 0;
+  font-size: 2rem;
+  background-color: white;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Navegación */
 nav {
-  margin: 20px 0;
   display: flex;
-  gap: 10px;
-}
-
-nav button {
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   padding: 10px 20px;
-  background-color: #007bff;
-  border: none;
+  gap: 15px;
+}
+
+button {
+  background-color: var(--color-principal);
   color: white;
-  border-radius: 8px;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-nav button:hover {
-  background-color: #0056b3;
+button:hover {
+  background-color: #1a242f;
 }
 
-/* Secciones */
 section {
-  background: white;
-  padding: 20px;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  width: 90%;
-  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: var(--color-principal);
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
-/* Formularios */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, select {
-  padding: 10px;
-  border: 1px solid #ccc;
+form input, form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #dfe6e9;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
-button[type="submit"],
-#btnCargarLista {
-  padding: 10px;
-  background-color: #28a745;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+form button {
+  width: 100%;
+  font-weight: 600;
+  background-color: var(--color-acento);
 }
 
-button[type="submit"]:hover,
-#btnCargarLista:hover {
-  background-color: #218838;
-}
-
-/* Resultados */
-#resultadoBusqueda,
-#listaPersonas {
-  margin-top: 15px;
+form button:hover {
+  background-color: #2980b9;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 15px;
 }
 
 th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  border: 1px solid #ecf0f1;
+  padding: 10px;
   text-align: left;
 }
 
 th {
-  background-color: #007bff;
-  color: white;
+  background-color: #f1f2f6;
+  font-weight: 600;
 }
 
-/* Ocultar secciones */
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
 .hidden {
   display: none;
 }
 
+p {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
